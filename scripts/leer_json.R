@@ -3,5 +3,14 @@
 #   Rscript scripts/leer_json.R
 
 # TODO 1: carga data/ventas.json con jsonlite::fromJSON
+install.packages("jsonlite")
+library(jsonlite)
+ventas <- fromJSON("data/ventas.json")
+View(ventas)
+
 # TODO 2: convierte el resultado en data.frame si hace falta
 # TODO 3: imprime las dimensiones (dim) y las primeras filas (head)
+
+head(ventas)
+dim(ventas)
+str(ventas)
